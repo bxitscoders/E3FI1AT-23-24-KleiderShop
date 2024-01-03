@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace KleiderShop
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaktionslogik für WarenkorbWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WarenkorbWindow : Window
     {
-        public MainWindow()
+        public WarenkorbWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            WarenkorbWindow neuesFenster = new WarenkorbWindow();
-            neuesFenster.Show();
         }
     }
 }
