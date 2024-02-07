@@ -10,15 +10,14 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace KleiderShop.View
 {
     /// <summary>
-    /// Interaktionslogik für MainView.xaml
+    /// Interaktionslogik für MainViewTest.xaml
     /// </summary>
-    public partial class MainView : Page
+    public partial class MainView : Window
     {
         public MainView()
         {

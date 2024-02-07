@@ -8,5 +8,13 @@ namespace KleiderShop.ViewModel
 {
     class MainViewModel
     {
+
+        public int MyProperty { get; set; }
+
+        public MainViewModel()
+        {
+
+
+        }
     }
 }
