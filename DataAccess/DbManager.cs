@@ -17,6 +17,7 @@ namespace DataAccess
         public static void DbConnection()
         {
             MySqlConnection connection = ConnectToDatabase();
+            connection.Open();
             try
             {
                 string query = "INSERT INTO produkt (ProduktID, Produktname, Artikelnummer, Beschreibung, Preis, Kategorie, Verfügbarkeit, Lagermenge) " +
@@ -48,7 +49,7 @@ namespace DataAccess
             }
             finally
             {
-                connection.Close(); // Verbindung schließen
+                connection.Close(); 
             }
         }
 

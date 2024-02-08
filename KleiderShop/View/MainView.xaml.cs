@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using DataAccess;
 namespace KleiderShop.View
 {
     /// <summary>
@@ -24,5 +24,11 @@ namespace KleiderShop.View
             InitializeComponent();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MySQLConnector sQLConnector = new MySQLConnector();
+
+            MessageBox.Show(sQLConnector.testConnection());
+        }
     }
 }

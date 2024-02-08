@@ -8,30 +8,100 @@ using DataAccess;
 
 namespace KleiderShop.ViewModel
 {
-    public class MainViewModel : INotifyPropertyChanged
+    public class MainViewModel
     {
-        private string _ladeDaten;
-
-        public string ladeDaten
+        private string produktName = "";
+        public string ProduktName
         {
-            get { return _ladeDaten; }
+            get { return produktName; }
             set
             {
-                if (_ladeDaten != value)
+                if (!string.IsNullOrEmpty(value))
                 {
-                    _ladeDaten = value;
-                    OnPropertyChanged(nameof(ladeDaten));
-                    DbManager.DbConnection();
+                    produktName = value;
                 }
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
+        private string beschreibung = "";
+        public string Beschreibung
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            get { return beschreibung; }
+            set
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                    beschreibung = value;
+                }
+            }
         }
+
+        private string artikelnummer = "";
+        public string Artikelnummer
+        {
+            get { return artikelnummer; }
+            set
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                    artikelnummer = value;
+                }
+            }
+        }
+
+        private string kategorie = "";
+        public string Kategorie
+        {
+            get { return kategorie; }
+            set
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                    kategorie = value;
+                }
+            }
+        }
+
+        private double preis = 0;
+        public double Preis
+        {
+            get { return preis; }
+            set
+            {
+                if (value > 0)
+                {
+                    preis = value;
+                }
+            }
+        }
+
+        private string verfuegbarkeit = "";
+        public string Verfuegbarkeit
+        {
+            get { return verfuegbarkeit; }
+            set
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                    verfuegbarkeit = value;
+                }
+            }
+        }
+
+        private int lagermenge = 0;
+        public int Lagermenge
+        {
+            get { return lagermenge; }
+            set
+            {
+                if (value > 0)
+                {
+                    lagermenge = value;
+                }
+            }
+        }
+
+
     }
 }
 
