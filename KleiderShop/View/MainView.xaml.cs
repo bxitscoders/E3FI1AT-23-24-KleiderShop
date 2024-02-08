@@ -30,5 +30,10 @@ namespace KleiderShop.View
 
             MessageBox.Show(sQLConnector.testConnection());
         }
+
+        private void btnLoeschen(object sender, RoutedEventArgs e)
+        {
+            DbManager.datensatzLoeschen();
+        }
     }
 }
