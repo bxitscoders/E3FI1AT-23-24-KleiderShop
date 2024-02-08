@@ -23,5 +23,6 @@ namespace KleiderShop.View
         {
             InitializeComponent();
         }
+
     }
 }
