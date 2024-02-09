@@ -10,6 +10,7 @@ namespace KleiderShop.ViewModel
 {
     public class MainViewModel
     {
+
         private string produktName = "";
         public string ProduktName
         {
@@ -100,6 +101,10 @@ namespace KleiderShop.ViewModel
                 }
             }
         }
+
+         private int aktuellerDatensatz = 0;
+
+
 
 
     }

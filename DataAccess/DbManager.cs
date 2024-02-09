@@ -5,7 +5,9 @@ namespace DataAccess
 {
     public static class DbManager
     {
-      
+        public List<Produkt> alleProdukte = new List<Produkt>();
+        public Produkt aktuellerProdukt = new Produkt();
+
         public static void loescheDantensatz()
         {
             string loeschString = "DELETE FROM produkt WHERE id=";
@@ -14,6 +16,7 @@ namespace DataAccess
         public static void holeDatensatz()
         {
             string selectString = "SELECT id, Produktname, Beschreibung, Artikelnummer, Kategorie, Preis, Verfügbarkeit, Lagermenge FROM produkt";
+
         }
 
         public static void fuegeDatensatzHinzu()
