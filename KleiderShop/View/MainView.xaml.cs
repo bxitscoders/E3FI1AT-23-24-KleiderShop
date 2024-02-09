@@ -31,29 +31,6 @@ namespace KleiderShop.View
             MessageBox.Show(sQLConnector.testConnection());
         }
 
-        private void btnLoeschen(object sender, RoutedEventArgs e)
-        {
-            DbManager.loescheDantensatz();
-        }
-
-        private void btnSpeichern(object sender, RoutedEventArgs e)
-        {
-            DbManager.fuegeDatensatzHinzu();
-        }
-        
-        private void btnAktualisieren(object sender, RoutedEventArgs e)
-        {
-            DbManager.updateDatenzsatz();
-        }
-
-        private void btnZurueck(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnVorwaerts(object sender, RoutedEventArgs e)
-        {
-
-        }
+       
     }
 }

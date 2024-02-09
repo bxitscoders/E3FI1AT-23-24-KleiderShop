@@ -102,11 +102,40 @@ namespace KleiderShop.ViewModel
             }
         }
 
-         private int aktuellerDatensatz = 0;
+        private int aktuellerDatensatz = 0;
 
+        private void Speichern()
+        {
 
+        }
 
+        private void Loeschen()
+        {
+            DbManager.loescheDantensatz();
+       
+        } 
 
+                
+        private void Aktualisieren()
+        {
+            DbManager.updateDatenzsatz();
+
+        }
+
+        private void Erfassen()
+        {
+            DbManager.fuegeDatensatzHinzu();
+        }
+
+        private void Vorwaerts()
+        {
+            aktuellerDatensatz++;
+        }
+
+        private void Zurueck()
+        {
+            aktuellerDatensatz--;
+        }
     }
 }
 
