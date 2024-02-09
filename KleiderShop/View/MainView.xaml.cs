@@ -33,7 +33,17 @@ namespace KleiderShop.View
 
         private void btnLoeschen(object sender, RoutedEventArgs e)
         {
-            DbManager.datensatzLoeschen();
+            DbManager.loescheDantensatz();
+        }
+
+        private void btnSpeichern(object sender, RoutedEventArgs e)
+        {
+            DbManager.fuegeDatensatzHinzu();
+        }
+        
+        private void btnAktualisieren(object sender, RoutedEventArgs e)
+        {
+            DbManager.updateDatenzsatz();
         }
     }
 }

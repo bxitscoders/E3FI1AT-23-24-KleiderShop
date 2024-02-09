@@ -6,16 +6,15 @@ namespace DataAccess
     public static class DbManager
     {
       
-        public static void loesceDantensatz()
+        public static void loescheDantensatz()
         {
             string loeschString = "DELETE FROM produkt WHERE id=";
         }
 
-        public static void holenDatensatz()
+        public static void holeDatensatz()
         {
             string selectString = "SELECT id, Produktname, Beschreibung, Artikelnummer, Kategorie, Preis, Verfügbarkeit, Lagermenge FROM produkt";
         }
-
 
         public static void fuegeDatensatzHinzu()
         {
