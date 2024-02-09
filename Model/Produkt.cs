@@ -8,6 +8,7 @@ namespace Model
 {
     public class Produkt
     {
+        public int id { get; set; }
         public string Produktname { get; set; }
         public string Beschreibung { get; set; }
         public string Artikelnummer { get; set; }

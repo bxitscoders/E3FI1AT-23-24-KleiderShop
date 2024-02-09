@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 14. Dez 2023 um 12:42
+-- Erstellungszeit: 09. Feb 2024 um 12:13
 -- Server-Version: 10.4.18-MariaDB
 -- PHP-Version: 8.0.3
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `kleidershop`
 --
-CREATE DATABASE IF NOT EXISTS `kleidershop` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `kleidershop`;
 
 -- --------------------------------------------------------
 
@@ -29,7 +27,6 @@ USE `kleidershop`;
 -- Tabellenstruktur für Tabelle `bestellinformation`
 --
 
-DROP TABLE IF EXISTS `bestellinformation`;
 CREATE TABLE `bestellinformation` (
   `BestellID` int(11) NOT NULL,
   `ProduktID` int(11) NOT NULL
@@ -41,7 +38,6 @@ CREATE TABLE `bestellinformation` (
 -- Tabellenstruktur für Tabelle `bestellung`
 --
 
-DROP TABLE IF EXISTS `bestellung`;
 CREATE TABLE `bestellung` (
   `BestellID` int(11) NOT NULL,
   `Datum` date DEFAULT NULL,
@@ -55,7 +51,6 @@ CREATE TABLE `bestellung` (
 -- Tabellenstruktur für Tabelle `produkt`
 --
 
-DROP TABLE IF EXISTS `produkt`;
 CREATE TABLE `produkt` (
   `ProduktID` int(11) NOT NULL,
   `Produktname` varchar(255) DEFAULT NULL,
@@ -66,6 +61,21 @@ CREATE TABLE `produkt` (
   `Verfügbarkeit` tinyint(1) DEFAULT NULL,
   `Lagermenge` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Daten für Tabelle `produkt`
+--
+
+INSERT INTO `produkt` (`ProduktID`, `Produktname`, `Artikelnummer`, `Beschreibung`, `Preis`, `Kategorie`, `Verfügbarkeit`, `Lagermenge`) VALUES
+(1, 'Beispielprodukt', '12345', 'Dies ist ein Beispielprodukt.', '19.99', 'Beispielkategorie', 1, 100),
+(2, 'Beispielprodukt2', '54321', 'Dies ist ein weiteres Beispielprodukt.', '29.99', 'Beispielkategorie2', 1, 150),
+(3, 'Beispielprodukt3', '98765', 'Ein drittes Beispielprodukt für Testzwecke.', '39.99', 'Beispielkategorie3', 1, 200),
+(4, 'Beispielprodukt4', '13579', 'Noch ein Beispielprodukt für die Datenbank.', '49.99', 'Beispielkategorie4', 1, 250),
+(5, 'Beispielprodukt5', '24680', 'Ein weiteres Beispielprodukt für die Datenbank.', '59.99', 'Beispielkategorie5', 1, 300),
+(6, 'Beispielprodukt6', '13579', 'Ein sechstes Beispielprodukt für Testzwecke.', '69.99', 'Beispielkategorie6', 1, 350),
+(7, 'Beispielprodukt7', '98765', 'Ein siebtes Beispielprodukt für die Datenbank.', '79.99', 'Beispielkategorie7', 1, 400),
+(8, 'Beispielprodukt8', '54321', 'Ein achtes Beispielprodukt für Testzwecke.', '89.99', 'Beispielkategorie8', 1, 450),
+(9, 'Beispielprodukt9', '10101', 'Ein neuntes Beispielprodukt für die Datenbank.', '99.99', 'Beispielkategorie9', 1, 500);
 
 --
 -- Indizes der exportierten Tabellen

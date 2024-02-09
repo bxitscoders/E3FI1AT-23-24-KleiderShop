@@ -112,13 +112,18 @@ namespace KleiderShop.ViewModel
         private void Loeschen()
         {
             DbManager.loescheDantensatz();
-       
+            if (aktuellerDatensatz>0)
+            {
+                aktuellerDatensatz--;
+            }
+            aktualisiereOberflaeche();
         } 
 
                 
         private void Aktualisieren()
         {
             DbManager.updateDatenzsatz();
+            aktualisiereOberflaeche();
 
         }
 
@@ -130,11 +135,18 @@ namespace KleiderShop.ViewModel
         private void Vorwaerts()
         {
             aktuellerDatensatz++;
+            aktualisiereOberflaeche();
         }
 
         private void Zurueck()
         {
             aktuellerDatensatz--;
+            aktualisiereOberflaeche();
+        }
+
+        private void aktualisiereOberflaeche()
+        {
+
         }
     }
 }
