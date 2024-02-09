@@ -14,7 +14,7 @@
 
     <Grid>
         <TextBox HorizontalAlignment="Left" Margin="63,56,0,0" Text="{Binding ProduktName}" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="19" />
-        <Button Content="Button" Margin="644,295,28,71" Click="Button_Click" RenderTransformOrigin="2.617,1.506"/>
+        <Button Content="btnConnectionTest" Margin="644,295,28,71" Click="Button_Click" RenderTransformOrigin="2.617,1.506"/>
         <Label Content="Produktname" Margin="63,30,630,378"/>
         <TextBox HorizontalAlignment="Left" Margin="63,114,0,0" Text="{Binding Beschreibung}" TextWrapping="Wrap" VerticalAlignment="Top" Width="709" Height="21" />
         <Label Content="Beschreibung" Margin="63,88,630,320"/>
@@ -30,6 +30,10 @@
         <TextBox HorizontalAlignment="Left" Margin="405,176,0,0" Text="{Binding Lagermenge}" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="20"  />
         <Button Content="Speichern" Margin="29,367,707,33" Click="btnSpeichern"/>
         <Button Content="Löschen" Margin="106,367,630,33" Click="btnLoeschen"/>
-        <Button Content="Aktualisieren" Margin="183,367,550,33" Click="btnAktualisieren"/>
+        <Button Content="Aktualisieren" Margin="191,367,542,33" Click="btnAktualisieren"/>
+        <Button Content="Erstellen" Margin="273,367,459,33" Click="btnErstellen"/>
+
+        <Button Content="Zurück" HorizontalAlignment="Left" Margin="118,258,0,0" VerticalAlignment="Top" Click="btnZurueck"/>
+        <Button Content="Vorwärts" HorizontalAlignment="Left" Margin="166,258,0,0" VerticalAlignment="Top" Click="btnVorwaerts"/>
     </Grid>
 </Window>

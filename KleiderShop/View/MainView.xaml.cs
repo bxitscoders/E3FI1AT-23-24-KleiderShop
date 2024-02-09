@@ -45,5 +45,15 @@ namespace KleiderShop.View
         {
             DbManager.updateDatenzsatz();
         }
+
+        private void btnZurueck(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnVorwaerts(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
