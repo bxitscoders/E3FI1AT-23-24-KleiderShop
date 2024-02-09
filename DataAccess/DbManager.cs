@@ -23,7 +23,15 @@ namespace DataAccess
 
         public static void fuegeDatensatzHinzu()
         {
-            string hinzufuegenString = "INSERT INTO produkt(Produktname, Beschreibung, Artikelnummer, Kategorie, Preis, Verfügbarkeit, Lagermenge) VALUES ()";
+            string produkt = aktuellerProdukt.Produkt();
+            string beschreibung = aktuellerProdukt.Beschreibung();
+            string artikelnummer = aktuellerProdukt.Artikelnummer();
+            string kategorie = aktuellerProdukt.Kategorie();
+            string preis = aktuellerProdukt.Preis();
+            string verfuegbarkeit = aktuellerProdukt.Verfuegbarkeit();
+            string lagermenge = aktuellerProdukt.Lagermenge();
+            string hinzufuegenString = "INSERT INTO produkt(Produktname, Beschreibung, Artikelnummer, Kategorie, Preis, Verfügbarkeit, Lagermenge) VALUES ("+ produkt + beschreibung + artikelnummer + kategorie + preis + verfuegbarkeit + lagermenge ")";
+    
         }
 
         public static void updateDatenzsatz()
