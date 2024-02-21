@@ -1,13 +1,15 @@
 ﻿using System;
-using MySql.Data.MySqlClient;
+using System.Collections.Generic;
+using DataAccess;
+using Model;
 
 namespace DataAccess
 {
     public static class DbManager
     {
-        public List<Produkt> alleProdukte = new List<Produkt>();
-        public Produkt aktuellerProdukt = new Produkt();
-        MySQLConnector mysqlConnector = new MySQLConnector();
+        public static List<Produkt> alleProdukte = new List<Produkt>();
+        public static Produkt aktuellerProdukt = new Produkt();
+        static MySQLConnector mysqlConnector = new MySQLConnector();
 
         public static void loescheDantensatz()
         {
@@ -23,14 +25,14 @@ namespace DataAccess
 
         public static void fuegeDatensatzHinzu()
         {
-            string produkt = aktuellerProdukt.Produkt();
-            string beschreibung = aktuellerProdukt.Beschreibung();
-            string artikelnummer = aktuellerProdukt.Artikelnummer();
-            string kategorie = aktuellerProdukt.Kategorie();
-            string preis = aktuellerProdukt.Preis();
-            string verfuegbarkeit = aktuellerProdukt.Verfuegbarkeit();
-            string lagermenge = aktuellerProdukt.Lagermenge();
-            string hinzufuegenString = "INSERT INTO produkt(Produktname, Beschreibung, Artikelnummer, Kategorie, Preis, Verfügbarkeit, Lagermenge) VALUES ("+ produkt + beschreibung + artikelnummer + kategorie + preis + verfuegbarkeit + lagermenge ")";
+            string produkt = aktuellerProdukt.Produktname;
+            string beschreibung = aktuellerProdukt.Beschreibung;
+            string artikelnummer = aktuellerProdukt.Artikelnummer;
+            string kategorie = aktuellerProdukt.Kategorie;
+            string preis = aktuellerProdukt.Preis.ToString();
+            string verfuegbarkeit = aktuellerProdukt.Verfuegbarkeit;
+            string lagermenge = aktuellerProdukt.Lagermenge.ToString();
+            string hinzufuegenString = "INSERT INTO produkt(Produktname, Beschreibung, Artikelnummer, Kategorie, Preis, Verfügbarkeit, Lagermenge) VALUES ("+ produkt + beschreibung + artikelnummer + kategorie + preis + verfuegbarkeit + lagermenge + ")";
     
         }
 
