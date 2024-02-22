@@ -21,6 +21,8 @@ namespace DataAccess
         {
             string selectString = "SELECT id, Produktname, Beschreibung, Artikelnummer, Kategorie, Preis, Verfügbarkeit, Lagermenge FROM produkt";
 
+            mysqlConnector.executeQuery(selectString);
+
         }
 
         public static void fuegeDatensatzHinzu()
@@ -33,12 +35,15 @@ namespace DataAccess
             string verfuegbarkeit = aktuellerProdukt.Verfuegbarkeit;
             string lagermenge = aktuellerProdukt.Lagermenge.ToString();
             string hinzufuegenString = "INSERT INTO produkt(Produktname, Beschreibung, Artikelnummer, Kategorie, Preis, Verfügbarkeit, Lagermenge) VALUES ("+ produkt + beschreibung + artikelnummer + kategorie + preis + verfuegbarkeit + lagermenge + ")";
-    
+
+            mysqlConnector.executeNonQuery(hinzufuegenString);
         }
 
         public static void updateDatenzsatz()
         {
             string updateString = "UPDATE produkt SET ";
+
+            mysqlConnector.executeNonQuery(updateString);
         }
     }
 }
