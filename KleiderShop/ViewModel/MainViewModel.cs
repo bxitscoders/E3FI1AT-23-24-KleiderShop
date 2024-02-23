@@ -104,12 +104,12 @@ namespace KleiderShop.ViewModel
 
         private int aktuellerDatensatz = 0;
 
-        private void Speichern()
+        public void Speichern()
         {
 
         }
 
-        private void Loeschen()
+        public void Loeschen()
         {
             DbManager.loescheDantensatz();
             if (aktuellerDatensatz>0)
@@ -120,31 +120,36 @@ namespace KleiderShop.ViewModel
         } 
 
                 
-        private void Aktualisieren()
+        public void Aktualisieren()
         {
             DbManager.updateDatenzsatz();
             aktualisiereOberflaeche();
 
         }
 
-        private void Erfassen()
+        public void Erfassen()
         {
             DbManager.fuegeDatensatzHinzu();
         }
 
-        private void Vorwaerts()
+        public void Vorwaerts()
         {
             aktuellerDatensatz++;
             aktualisiereOberflaeche();
         }
 
-        private void Zurueck()
+        public void Zurueck()
         {
             aktuellerDatensatz--;
             aktualisiereOberflaeche();
         }
 
-        private void aktualisiereOberflaeche()
+        public void aktualisiereOberflaeche()
+        {
+
+        }
+
+        public void Erstellen()
         {
 
         }

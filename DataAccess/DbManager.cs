@@ -9,7 +9,7 @@ namespace DataAccess
     {
         public static List<Produkt> alleProdukte = new List<Produkt>();
         public static Produkt aktuellerProdukt = new Produkt();
-        static MySQLConnector mysqlConnector = new MySQLConnector();
+        private static MySQLConnector mysqlConnector = new MySQLConnector();
 
         public static void loescheDantensatz()
         {
